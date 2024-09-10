@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: black;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+header a {
+    color: white;
+    font-size: 1.2em;
+}
+.grid {
+    display: grid;
+    /* la grille explicite est ce que nous avons définit, dans notre cas il s'agit
+    des 2 premières colonnes et de la première ligne. Le reste de la grille s'appelle 
+    la grille implicite car elle n'est pas définie en CSS */
+    grid-template-columns: repeat(2,200px);
+    grid-template-rows: 100px;
+    /* grid-auto-rows permet d'agir sur les grilles implicites (créer de manière autonome) */
+    grid-auto-rows: 200px 50px;
+}
+.item {
+    background-color: rgb(219, 219, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    /* On définit la hauteur de la ligne */
+    grid-template-rows: 100px;
+    /* Par défaut, le flow est en ligne c'est à dire que les éléments passent les uns sous les autres
+    mais on peut le changer pour que les colonnes se placent les unes à côté des autres grâce à : */
+    grid-auto-flow: column;
+    /* Les colonnes implicites auront dans ce cas une largeur de 200px */
+    grid-auto-columns: 300px 150px 75px 38px;
+}
+
+.item-2 {
+    background-color:aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+}
+

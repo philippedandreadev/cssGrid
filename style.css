@@ -4,6 +4,15 @@ body {
     margin: 0;
     padding: 0;
 }
+header {
+    background: black;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+header a {
+    color: white;
+    font-size: 1.2em;
+}
 .grid {
     /* Initialisation de la grille */
     display: grid;
