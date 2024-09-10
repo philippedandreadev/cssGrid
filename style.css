@@ -1,0 +1,45 @@
+/* Css grid permet de créer des layouts simples ou complexes 
+Cliquer sur grid dans l'inspecteur pour visualiser la grille */
+body {
+    margin: 0;
+    padding: 0;
+}
+.grid {
+    /* Initialisation de la grille */
+    display: grid;
+    /* grid à 2 colonnes pour les petites résolutions */
+    grid-template-columns: 50% 50%;
+}
+.item {
+    height: 100px;
+    width: 100px;
+    background-color:teal;
+    color: white;
+}
+
+/* Passage à 4 colonnes pour les écrans de plus de 800px 
+1 colonne à 15%, 2 à 20% et 1 auto qui compléte l'espace disponible */
+@media screen and (min-width: 800px) {
+    .grid {
+        grid-template-columns: 20% repeat(2,20%) auto;
+    }
+}
+.grid2 {
+    display: grid;
+    /* On peut utiliser le fr pour fractionner nos items de manières égales 
+    Dans notre cas, nous aurons 2 lignes de 3 colonnes proportionnelles*/
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-rows permet d'initialiser des lignes. Dans le cas suivant
+    nous avons 2 lignes de 200px de hauteur */
+    grid-template-rows: 200px 200px;
+}
+.item-2 {
+    height: 100px;
+    width: 100px;
+    background-color:violet;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
