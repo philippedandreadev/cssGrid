@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: black;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+header a {
+    color: white;
+    font-size: 1.2em;
+    line-height: 2em;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 100px 300px 100px;
+}
+
+.item {
+    background-color: teal;
+    color: white;
+}
+.item-1 {
+    background-color:slategrey;
+    /* -1 signifie 100% de la largeur. Si on met -2 grid se positionnera à la ligne 
+    numéro en partant de la fin */
+    grid-column: 1 / -1;
+}
+.item-2, .item-4 {
+    background: teal
+}
+.item-3 {
+    grid-column: 3 span;
+    background: white;
+    color: black;
+}
+.item-5 {
+    background: black;
+    grid-column: 5 span;
+}

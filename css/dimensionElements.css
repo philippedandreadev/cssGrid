@@ -1,0 +1,43 @@
+/* Css grid permet de créer des layouts simples ou complexes 
+Cliquer sur grid dans l'inspecteur pour visualiser la grille */
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: black;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+header a {
+    color: white;
+    font-size: 1.2em;
+}
+
+.item {
+    background-color:teal;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-2 {
+    background-color: yellowgreen;
+    /* l'item-2 occupe 2 colonnes 
+    grid-column: 2 span;
+    /* l'item-2 occupe 2 lignes 
+    grid-row: 2 span; */
+}
+.item-6 {
+    /* l'item-6 part de la colonne 4 et occupe 2 colonnes */
+    grid-column: 4/2 span;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,200px);
+    
+}
+
+
+
