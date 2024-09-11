@@ -1,0 +1,38 @@
+/* Css grid permet de créer des layouts simples ou complexes 
+Cliquer sur grid dans l'inspecteur pour visualiser la grille */
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: black;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+header a {
+    color: white;
+    font-size: 1.2em;
+    line-height: 2em;
+}
+.grid {
+    display: grid;
+    /* Pour le responsive, on donne une largeur minimum et maximum à nos colonnes à ne pas dépasser.
+       Pour ne pas pas avoir un nombre de colonnes figées, on utilise soit auto-fit soit auto-fill, dans ce
+       cas, les colonnes vont passer les unes sous les autres quand elles passent en dessous de leur taille initiale.
+       La différence entre auto-fit et auto-fill est qu'au delà de la taille fixée avec auto-fit les colonnes
+       vont s'adapter pour prendre toute la largeur. Avec auto-fill, le navigateur crée de nouvelles colonnes dés qu'il
+       en a la place */
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    grid-template-rows: 200px 200px;
+
+    /* Espace: row-gap = espace entre les lignes
+                         column-gap = espace entre les colonnes 
+                         grid-gap = espace entre les colonnes et les lignes */
+    grid-gap: 10px;
+}
+.item {
+    background: black;
+    color: white;
+}
+
